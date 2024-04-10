@@ -1,12 +1,13 @@
 .vegetables{
     background: #7a3145;
+    padding: 80px 0;
 }
 .vegetables-container{
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;
     flex-direction: column;
-    gap: 20px;
+    gap: 40px;
 }
 .vegetables-content{
     display: flex;
@@ -14,7 +15,7 @@
     justify-content: flex-start;
     flex-direction: column;
     gap: 20px;
-    
+    max-width: 626px;
 }
 .vegetables-content-title{
     font-family: "Inter Tight", sans-serif;
@@ -70,8 +71,53 @@
     font-weight: 600;
     font-size: 14px;
 
-    line-height: 1.28571;
+    line-height: 1.28;
     letter-spacing: -0.01em;
     text-transform: uppercase;
     color: #141414;
+}
+
+@media screen and (min-width: 768px) {
+    .vegetables {
+        padding: 100px 0;
+    }
+    .vegetables-container {
+        gap: 50px;
+    }
+    .vegetables-content{
+        gap: 50px;
+    }
+    
+    .vegetables-content-title {
+        font-size: 64px;
+        line-height: 1;
+    }
+    .vegetables-content-text {
+        font-size: 16px;
+        line-height: 1.25;
+    }
+    .vegetables-list{
+        flex-direction: row;
+        flex-wrap: wrap;
+        row-gap: 28px;
+        column-gap: 20px;
+    }
+    .vegetables-list-item{
+        width: calc((100% - 20px) / 2);
+    }
+    .card-content {
+        margin-bottom: 10px;
+    }
+    .vegetables-card-title{
+        font-size: 32px;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .vegetables-content {
+        gap: 25px;
+    }
+    .vegetables-list-item {
+        width: calc((100% - 40px) / 3);
+    }
 }
